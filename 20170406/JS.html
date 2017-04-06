@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>x:<input type="number" name="x" id="X"></p><br>
+<p>y:<input type="number" name="y" id="Y"></p><br>
+<script>
+	
+	function add(){
+    var x,y,z;
+	x=document.getElementById("X").value;
+    y=document.getElementById("Y").value;
+    z=parseInt(x)+parseInt(y);
+    document.getElementById("ans").innerHTML=z;
+    }	
+    function minus(){
+    var x,y,z;
+	x=document.getElementById("X").value;
+    y=document.getElementById("Y").value;
+    z=parseInt(x)-parseInt(y);
+    document.getElementById("ans").innerHTML=z;
+    }
+    function mult(){
+    var x,y,z;
+	x=document.getElementById("X").value;
+    y=document.getElementById("Y").value;
+    z=parseInt(x)*parseInt(y);
+    document.getElementById("ans").innerHTML=z;
+    }
+    function divison(){
+    var x,y,z;
+	x=document.getElementById("X").value;
+    y=document.getElementById("Y").value;
+    z=parseInt(x)/parseInt(y);
+    document.getElementById("ans").innerHTML=z;
+    }
+    function clean(){
+    var x,y,z;
+	document.getElementById("X").value="";
+    document.getElementById("Y").value="";
+    document.getElementById("ans").innerHTML=0;
+    }
+    function myfun()
+    {
+        var x=document.getElementById("num").value;
+        if ( x < 60) {
+            document.getElementById("demo").innerHTML = "不及格!";
+        }
+        else{
+            document.getElementById("demo").innerHTML = "及格!";
+        }
+    }
+</script>
+
+<button onClick="add()">+</button>
+<button onClick="minus()">-</button>
+<button onClick="mult()">*</button>
+<button onClick="divison()">/</button>
+<button onClick="clean()">C</button>
+<p>sum:</p>
+<p id="ans"></p>
+<hr>
+<input type="number" name="num" id="num">
+<button onClick="myfun()">成績判斷</button>
+<p id="demo">結果</p>
+</body>
+</html>
